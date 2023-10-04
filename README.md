@@ -3,7 +3,8 @@
 # Getting Started
 
 To get started using selenium and the selenium example script, follow these steps:
-
+# 0. Setup enviroment
+- insert steps here
 # 1. Activate Virtual Environment
 This will create a virtual environment in the current directory which can be used to install new python modules.
 
