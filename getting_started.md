@@ -1,5 +1,3 @@
-# Group 9 Selenium Lab
-
 # Getting Started
 
 To get started using selenium and the selenium example script, follow these steps:
