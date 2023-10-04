@@ -9,7 +9,6 @@ To get started using selenium and the selenium example script, follow these step
     -     $ git clone git@github.com:CSC-256-Group-Project-9/Group-9-Selenium-Lab.git
 - Run the following script to swap to the basic-scripting branch
     -     $ git checkout basic-scripting
-- 
 # 1. Activate Virtual Environment
 This will create a virtual environment in the current directory which can be used to install new python modules.
 
