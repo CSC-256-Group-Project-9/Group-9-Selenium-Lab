@@ -1,9 +1,9 @@
 # Selenium Lab LLD 7.0
 
-from web_interaction import initialize_driver, navigate_to_url
-from validation import validate_page_title, is_element_present
-from report_generation import initialize_report, log_result
-from utilities import capture_screenshot, read_data
+from selenium_utils.web_interaction import initialize_driver, navigate_to_url
+from selenium_utils.validation import validate_page_title, is_element_present
+from selenium_utils.report_generation import initialize_report, log_result
+from selenium_utils.utilities import capture_screenshot, read_data
 
 
 def main():
