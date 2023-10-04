@@ -5,7 +5,7 @@
 To get started using selenium and the selenium example script, follow these steps:
 # 0. Setup enviroment
 - Insert steps to enable scripts on powershell
-- 
+- Run the following script to clone the repo:
     -     $ git clone <url>
 -     $ git checkout basic-scripting
 - 
