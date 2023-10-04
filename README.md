@@ -4,7 +4,11 @@
 
 To get started using selenium and the selenium example script, follow these steps:
 # 0. Setup enviroment
-- insert steps here
+- Insert steps to enable scripts on powershell
+- 
+    -     $ git clone <url>
+-     $ git checkout basic-scripting
+- 
 # 1. Activate Virtual Environment
 This will create a virtual environment in the current directory which can be used to install new python modules.
 
