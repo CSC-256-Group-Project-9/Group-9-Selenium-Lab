@@ -7,6 +7,8 @@ To get started using selenium and the selenium example script, follow these step
 - Insert steps to enable scripts on powershell
 - Run the following script to clone the repo:
     -     $ git clone git@github.com:CSC-256-Group-Project-9/Group-9-Selenium-Lab.git
+- Go to the Group-9-Selenium-Lab:
+    -     $ cd .\Group-9-Selenium-Lab\
 - Run the following script to swap to the basic-scripting branch
     -     $ git checkout basic-scripting
 # 1. Activate Virtual Environment
