@@ -44,7 +44,7 @@ To install the requirements for this script, use <code>pip</code> to install req
 
 # 4. Download Web Driver
 
-<h2 style="color: red;">This step was not reuired to get selenium to work during testing</h2>
+<h2 style="color: red;">This step was not required to get selenium to work during testing.</h2>
 
 ## For Chrome:
 Check your [Chrome version](chrome://settings/help).
