@@ -1,69 +1,15 @@
 # Group 9 Selenium Lab
 
-# Getting Started
+This repository contains the information and resources needed for students to follow and complete the selenium lab. The [For-Students](For-Students) folder contains documents and resources that are to be delivered to students.
 
-To get started using selenium and the selenium example script, follow these steps:
+## Getting Started
 
-# 1. Setup enviroment
-Run the following command to clone the repo:
+- [Environment Setup](https://github.com/CSC-256-Group-Project-9/Group-9-Environment-Setup/blob/main/For-Students/getting-started.md) - First time setup instructions for students to follow before completing the lab.
 
-    git clone git@github.com:CSC-256-Group-Project-9/Group-9-Selenium-Lab.git
+- [Pre-Lab Instructions Template](https://github.com/CSC-256-Group-Project-9/Group-9-Environment-Setup/blob/main/getting-started.md) - A template for documenters to use for adding pre-lab instructions for this lab.
 
-Go to the Group-9-Selenium-Lab:
+## Notes
 
-    cd .\Group-9-Selenium-Lab\
+- **Environment setup instructions** have moved. The new instructions are at [Environment Setup Instructions](https://github.com/CSC-256-Group-Project-9/Group-9-Environment-Setup/blob/main/For-Students/getting-started.md) in the [Environment Setup](https://github.com/CSC-256-Group-Project-9/Group-9-Environment-Setup) repo. The example selenium code was moved to [Student-Examples/Example-1](Student-Examples/Example-1) and there is a new set of [instructions](Student-Examples/Example-1/instructions.md) for it.
 
-Run the following command to swap to the basic-scripting branch:
-
-    git checkout basic-scripting
-   
-# 2. Activate Virtual Environment
-
-This will create a virtual environment in the current directory which can be used to install new python modules.
-
-    python -m venv venv
-
-The virtual environment needs to be activated after being created.
-
-**For PowerShell:**
-
-If you have already enabled script execution for your system, you may skip the following step, otherwise, in an elevated terminal (administrator privileges) run the following command:
-
-    set-executionpolicy remotesigned
-
-After script execution is enabled, run the following command to activate the virtual environment:
-
-    .\venv\Scripts\Activate.ps1
-
-At this point you should see <code>(venv)</code> at the beginning of each prompt.
-
-# 3. Install requirements.txt
-To install the requirements for this script, use <code>pip</code> to install requirements from <code>requirements.txt</code>.
-
-    pip install -r requirements.txt
-
-# 4. Download Web Driver
-
-<h2 style="color: red;">This step was not required to get selenium to work during testing.</h2>
-
-## For Chrome:
-Check your [Chrome version](chrome://settings/help).
-
-Navigate to [Chrome for Testing availability](https://googlechromelabs.github.io/chrome-for-testing/) and locate your installed version of Chrome. Visit the link labeled <code>chromedriver</code> for your platform.
-
-Inside the downloaded zip file, locate <code>chromedriver.exe</code> and move it to the drivers directory for this repository.
-
-# 5. Test Installation
-Run the <code>test_installation.py</code> script.
-
-    python ./test_installation.py
-    
-Expected Output:
-
-    DevTools listening on ws://127.0.0.1.....
-    Installation verified
-
-# 6. Example Script
-You may run the <code>example_test_script.py</code> the same way you ran the <code>test_installation.py</code> script.
-
-    python ./example_test_script.py
+- Some documents are labeled with a **DEV NOTE** which contains relevant information. These notes are **NOT** to be included in any final release.
