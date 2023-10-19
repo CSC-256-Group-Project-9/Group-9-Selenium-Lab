@@ -3,10 +3,8 @@
 # This script assumes that the web app will pass all of the tests
 # Author: William Henderson
 
-from selenium_utils.web_interaction import initialize_driver, navigate_to_url
-from selenium_utils.validation import validate_page_title, is_element_present
-from selenium_utils.report_generation import initialize_report, log_result
-from selenium_utils.utilities import capture_screenshot, read_data
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.common.exceptions import JavascriptException
@@ -151,8 +149,8 @@ def do_test_3(driver: WebDriver):
     
 
 def main():
-    driver = initialize_driver('Chrome')
-    navigate_to_url(url='https://group-9-webapp-ts.vercel.app/', driver=driver)
+    driver = webdriver.Chrome()
+    driver.get('https://group-9-webapp-ts.vercel.app/')
 
     do_test_1(driver=driver)
     do_test_2(driver=driver)
