@@ -9,14 +9,16 @@ from selenium.webdriver.common.by import By
 
 class StudentTestExamples(unittest.TestCase):
 
+    # Create website url variable
+    URL = 'https://group-9-unofficial.vercel.app/testing'
+    
     def setUp(self):
         """
         Initialization of webdriver
         """
         self.driver = webdriver.Chrome()
-        self.url = 'https://group-9-webapp-ts.vercel.app/'
         self.WAIT_TIME = 0.5  # Increase time to see the test in action!
-        self.driver.get(self.url)
+        self.driver.get(self.URL)
         
     def test_input_field(self):
         """
@@ -26,16 +28,16 @@ class StudentTestExamples(unittest.TestCase):
         test_string = 'Input field test string'
 
         # Input test string into text input field and wait for it to reflect
-        input_element = self.driver.find_element(By.CSS_SELECTOR, '.test1 input')
+        input_element = self.driver.find_element(By.ID, 'test1-input')
         input_element.send_keys(test_string)
         time.sleep(self.WAIT_TIME)
 
         # Get the output element and assign the text to a variable
-        output_element = self.driver.find_element(By.CSS_SELECTOR, '.test1 label:last-of-type')
+        output_element = self.driver.find_element(By.CSS_SELECTOR, 'body > div > div.test.test1 > p:nth-child(4)')
         output_string = output_element.text
 
         # Verify expected output using assert
-        expected_output = 'Output: ' + test_string
+        expected_output = 'Value: ' + test_string
         self.assertEqual(output_string, expected_output, 
                          f'Expected output: {expected_output} but got {output_string}')
         
@@ -46,20 +48,20 @@ class StudentTestExamples(unittest.TestCase):
         # Number of clicks to try
         total_clicks = 5
 
-        # Find the 'Click Me' button element
+        # Find the 'Click!' button element
         button = self.driver.find_element(By.CSS_SELECTOR, '.test2 button')
 
-        # Click the 'Click Me' button multiple times by using a for loop
+        # Click the 'Click!' button multiple times by using a for loop
         for num_clicks in range(0, total_clicks):
             button.click()
             time.sleep(self.WAIT_TIME)
 
         # Find counter element and get displayed amount
-        counter_element = self.driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[2]/p[3]')
+        counter_element = self.driver.find_element(By.CSS_SELECTOR, '.test2 p:nth-child(4)')
         output_string = counter_element.text
 
         # Verify expected output using assert method
-        expected_output = "Counter: " + str(total_clicks)
+        expected_output = "Value: " + str(total_clicks)
         self.assertEqual(output_string, expected_output, 
                          f'Expected output: {expected_output} but got {output_string}')
         
@@ -78,17 +80,17 @@ class StudentTestExamples(unittest.TestCase):
         time.sleep(self.WAIT_TIME)
 
         # Find counter element and get displayed amount
-        counter_element = self.driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[2]/p[3]')
+        counter_element = self.driver.find_element(By.CSS_SELECTOR, '.test2 p:nth-child(4)')
         output_string = counter_element.text
 
         # Verify expected output using assert method
-        expected_output = "Counter: 0"
+        expected_output = "Value: 0"
         self.assertEqual(output_string, expected_output, 
                          f'Expected output: {expected_output} but got {output_string}')
 
     # Cleanup method called after every test performed
     def tearDown(self):
-        self.driver.quit()
+        self.driver.close()
 
 # execute the script
 if __name__ == "__main__":
